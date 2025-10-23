@@ -1,35 +1,15 @@
-# AV/LV Quoting Platform Prototype
+# AV/LV Quoting Platform Documentation
 
-This repository now contains both the formal specification and a Bootstrap-powered PHP prototype for the AV/LV quoting application. The prototype focuses on visualizing the next-phase workflows described in the documentation, including dashboards, projects, quotes, notifications, imports, configuration, and audit logging views.
+This repository contains formal documentation for a PHP-based quoting application supporting audio-visual (AV) and low-voltage (LV) projects. The solution is constrained to PHP on the backend with HTML/CSS/JavaScript (Bootstrap) on the frontend.
 
-## Getting Started
+## Document Index
+- [`docs/requirements.md`](docs/requirements.md): Detailed functional and non-functional requirements.
+- [`docs/architecture.md`](docs/architecture.md): High-level solution architecture and component overview.
+- [`docs/database-schema.md`](docs/database-schema.md): Preliminary MySQL schema design.
+- [`docs/user-stories.md`](docs/user-stories.md): Role-based user stories for estimators, sales reps, managers, administrators, and clients.
+- [`docs/wireframes.md`](docs/wireframes.md): Textual wireframes describing major user interfaces.
+- [`docs/implementation-plan.md`](docs/implementation-plan.md): Phase-based implementation roadmap.
 
-The application is built without external dependencies beyond PHP 8.x. Use the built-in PHP web server to explore the prototype:
+## Next Steps
+Use these documents as the basis for detailed design, estimation, and development planning. As the project evolves, update each section to reflect the latest decisions, ensuring all business rules remain configurable within the application.
 
-```bash
-php -S localhost:8000 -t public
-```
-
-Then navigate to [http://localhost:8000](http://localhost:8000) to browse the UI.
-
-## Project Structure
-
-```
-public/              Front controller, assets, and entry point
-app/                 Configuration, helpers, and sample data
-views/               PHP templates grouped by feature area
-docs/                Formal requirements, architecture, and planning assets
-```
-
-## Documentation Index
-- [`docs/requirements.md`](docs/requirements.md)
-- [`docs/architecture.md`](docs/architecture.md)
-- [`docs/database-schema.md`](docs/database-schema.md)
-- [`docs/user-stories.md`](docs/user-stories.md)
-- [`docs/wireframes.md`](docs/wireframes.md)
-- [`docs/implementation-plan.md`](docs/implementation-plan.md)
-
-## Notes
-- All feature toggles (Azure AD, client portal, regional tax) are disabled by default but surfaced in the settings UI to reflect "framework ready" requirements.
-- The interface uses static sample data to illustrate flows until database integration is implemented.
-- Only PDF storage is modeled in the configuration panel to align with current storage constraints.
